@@ -44,9 +44,6 @@ Route::middleware(['auth', 'CheckRole:cashier'])->group(function () {
     Route::post('/purchase/sale/store', [PurchaseController::class, 'store'])->name('purchase.sale.store');
     Route::get('/purchase/member/create', [PurchaseController::class, 'createMember'])->name('purchase.member.create');
     Route::post('/purchase/member/store', [PurchaseController::class, 'purchaseMember'])->name('purchase.member.store');
-    Route::get('/users', [UserController::class, 'index'])->name('users.index');
-    Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
-    Route::post('/users', [UserController::class, 'store'])->name('users.store');
 });
 
 // ROUTES KHUSUS ADMIN

@@ -37,6 +37,13 @@ class DashboardController extends Controller
     })->map(function ($group) {
         return $group->count();
     });
+    $todaySalesCount = DB::table('purchases')
+    ->whereDate('created_at', now()->toDateString())
+    ->count();
+
+    $lastUpdate = DB::table('purchases')
+    ->orderByDesc('created_at')
+    ->value('created_at');
 
     $labels = $salesPerDay->keys();
     $totals = $salesPerDay->values();
@@ -79,6 +86,8 @@ class DashboardController extends Controller
         'productLabels' => json_encode(array_keys($productCount)),
         'productTotals' => json_encode(array_values($productCount)),
         'totalProfit' => $totalProfit,
+        'todaySalesCount' => $todaySalesCount,
+        'lastUpdate' => $lastUpdate,
         'range' => $range,
         'startDate' => $startDate->format('d M Y'),
         'endDate' => now()->format('d M Y'),

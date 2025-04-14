@@ -97,12 +97,12 @@
                                 <h3 class="text-lg font-medium mb-3">Total Penjualan Hari Ini
                                 </h3>
                                 <h1 class="text-4xl font-bold text-gray-800 mt-3 mb-3">
-                                    {{-- {{ $todaySalesCount }}</h1> --}}
+                                    {{ $todaySalesCount }}</h1>
                                 <h3 class="text-lg mt-2">Jumlah total penjualan yang terjadi
                                     hari ini.</h3>
                                 <p class="text-sm mt-4">
                                     Terakhir diperbarui:
-                                    {{-- {{ \Carbon\Carbon::parse($lastUpdate)->format('d M Y H:i') }} --}}
+                                    {{ \Carbon\Carbon::parse($lastUpdate)->format('d M Y H:i') }}
                                     </p>
 
                                 </div>

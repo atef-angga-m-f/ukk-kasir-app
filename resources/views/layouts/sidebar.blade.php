@@ -34,11 +34,13 @@
             </li>
 
             <!-- Nav Item - Tables -->
+            @if (auth()->user()->role !== 'cashier')
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('users.index') }}">
                         <i class="fas fa-fw fa-user"></i>
                         <span>User</span></a>
                 </li>
+            @endif
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

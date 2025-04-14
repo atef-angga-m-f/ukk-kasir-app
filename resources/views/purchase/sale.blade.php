@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'Pilih Product')
 
 @section('content')
     <!-- Page Wrapper -->
@@ -20,7 +20,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Pilih Product</h1>
 
                     <form id="purchase-form" action="{{ route('purchase.sale.post') }}" method="POST">
                         @csrf

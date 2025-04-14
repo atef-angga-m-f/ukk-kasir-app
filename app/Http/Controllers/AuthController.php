@@ -13,14 +13,6 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-/*************  ✨ Windsurf Command ⭐  *************/
-    /**
-     * Handle an authentication attempt.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-/*******  7e9c28b7-38a1-42cd-96af-2d53370e8f23  *******/
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
